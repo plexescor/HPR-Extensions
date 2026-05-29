@@ -21,15 +21,15 @@ This allows you to enjoy web tracking statistics directly within the HPR main de
 Follow these steps to install the extension and view your web browsing history inside HPR:
 
 ### 1. Install the Lua Extension Script
-You must place the `main.lua` script inside HPR's extension directory so that the background loader can find and run it when the application starts.
+You must place the `AW-URL-Parasite-HPR-Extension.lua` script inside HPR's extension directory so that the background loader can find and run it when the application starts.
 
-* **On Windows**: Copy `main.lua` to:
+* **On Windows**: Copy `AW-URL-Parasite-HPR-Extension.lua` to:
   ```cmd
-  %APPDATA%\HPR\HPR_Config\extensions\main.lua
+  %APPDATA%\HPR\HPR_Config\extensions\AW-URL-Parasite-HPR-Extension.lua
   ```
-* **On Linux**: Copy `main.lua` to:
+* **On Linux**: Copy `AW-URL-Parasite-HPR-Extension.lua` to:
   ```bash
-  ~/.config/HPR/extensions/main.lua
+  ~/.config/HPR/extensions/AW-URL-Parasite-HPR-Extension.lua
   ```
 
 ### 2. Extract and Install the Slint UI Files
