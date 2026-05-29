@@ -2,7 +2,7 @@
 
 Official and community-contributed extensions for [HPR (Human Pattern Recorder)](https://github.com/plexescor/HPR) - the lightweight, privacy-first, C++23 activity tracker.
 
-This repository is the central hub for HPR extensions written in Lua. Every extension here has been reviewed and approved. No malicious code. No network exfiltration. No surprises.
+This repository is the central hub for HPR extensions written in Lua. Every extension here has been reviewed and approved. No malicious code. No surprises.
 
 ---
 
@@ -79,7 +79,7 @@ For everything you need to know about writing extensions - the full API referenc
 
 These rules apply to every extension in this repository.
 
-**No network exfiltration.** Extensions must not send data to unknown/unsafe servers under any circumstances.
+**No network exfiltration.** No calls to unknown or untrusted external servers. Extensions may make localhost network calls (e.g. reading from a local service) but must never send data to external servers without explicit user knowledge and consent documented in the extension's README.
 
 **No destructive system commands.** HPR blocks dangerous commands at the C++ level. Extensions must not attempt to work around this.
 
