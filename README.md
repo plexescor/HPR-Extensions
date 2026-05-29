@@ -53,6 +53,12 @@ That is it. No package managers. No compilers. No installation scripts. One file
 
 ---
 
+## Official Extensions
+
+* **AW URL Parasite HPR Extension**: Monitors and logs active web browser sessions in real-time by polling the local ActivityWatch API.
+
+---
+
 ## Community Extensions
 
 Community extensions are submitted via pull request and reviewed before merging. If an extension passes review it gets listed here with the author credited.
