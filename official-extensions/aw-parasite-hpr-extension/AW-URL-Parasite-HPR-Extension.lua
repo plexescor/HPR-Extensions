@@ -1,5 +1,5 @@
 -- ============================================================
---  ActivityWatch Server Impersonator — HPR Extension
+--  AW URL Parasite HPR Extension
 --  Author: Plexescor
 --
 --  What this does:
@@ -126,7 +126,7 @@ end
 
 function init()
     HPR.authorName    = "Plexescor"
-    HPR.extensionName = "AW Impersonator Server"
+    HPR.extensionName = "AW URL Parasite HPR Extension"
 
     -- Wait until Slint UI is fully active so UI properties are pushed successfully
     print("[aw_server] Waiting for Slint UI to initialize...")
