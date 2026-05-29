@@ -99,7 +99,7 @@ These rules apply to every extension in this repository.
 
 HPR supports loading native shared library extensions (`.so` on Linux, `.dll` on Windows) but they are not officially entertained in this repository. Pull requests containing compiled native extensions will not be merged. Ever.
 
-Native extensions bypass HPR's entire Lua sandbox — no dangerous command filtering, no VM isolation, no controlled API surface. A native extension runs as raw C++ inside HPR's process with full access to everything. There is no safety net.
+Native extensions bypass HPR's entire Lua sandbox - no dangerous command filtering, no VM isolation, no controlled API surface. A native extension runs as raw C++ inside HPR's process with full access to everything. There is no safety net.
 
 If you find a native extension you want to use:
 
