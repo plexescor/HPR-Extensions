@@ -95,6 +95,21 @@ These rules apply to every extension in this repository.
 
 ---
 
+## Native Extensions (.so / .dll)
+
+HPR supports loading native shared library extensions (`.so` on Linux, `.dll` on Windows) but they are not officially entertained in this repository. Pull requests containing compiled native extensions will not be merged. Ever.
+
+Native extensions bypass HPR's entire Lua sandbox — no dangerous command filtering, no VM isolation, no controlled API surface. A native extension runs as raw C++ inside HPR's process with full access to everything. There is no safety net.
+
+If you find a native extension you want to use:
+
+- **Read the source code yourself before running anything.** A clean source repository means nothing if the author distributed a pre-compiled binary that does not match it. The only binary you should trust is one you compiled yourself.
+- **Compile it from source.** Clone the repository, inspect every line, build the `.so` or `.dll` yourself. Do not run pre-compiled native extension binaries from the internet regardless of how trustworthy the author seems.
+- **Enable native extensions in your config at your own risk.** Set `allow-dynamic-library-extensions,true` in your `config.csv` only after you have reviewed and compiled the extension yourself.
+
+The source code for any native extension worth using should be fully public and auditable. If the author is not sharing source code, do not use it.
+
+---
 ## License
 
 All extensions in this repository are licensed under the GPLv3 License unless the individual extension's folder specifies otherwise.
