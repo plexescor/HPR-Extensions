@@ -1,6 +1,6 @@
 # HPR-Extensions
 
-Official and community-contributed extensions for [HPR (Human Pattern Recorder)](https://github.com/plexescor/HPR) — the lightweight, privacy-first, C++23 activity tracker.
+Official and community-contributed extensions for [HPR (Human Pattern Recorder)](https://github.com/plexescor/HPR) - the lightweight, privacy-first, C++23 activity tracker.
 
 This repository is the central hub for HPR extensions written in Lua. Every extension here has been reviewed and approved. No malicious code. No network exfiltration. No surprises.
 
@@ -18,11 +18,11 @@ Want to learn how to write your own extension? The full API reference, tutorials
 
 ## Installation
 
-### Step 1 — Find the extension you want
+### Step 1 - Find the extension you want
 
 Browse the folders in this repository. Each extension has its own subfolder with a `README.md` explaining what it does, what it requires, and any setup steps specific to that extension.
 
-### Step 2 — Copy the `.lua` file(s) to your HPR extensions folder
+### Step 2 - Copy the `.lua` file(s) to your HPR extensions folder
 
 **Linux:**
 ```
@@ -45,7 +45,7 @@ extensions/
     my-other-thing.lua
 ```
 
-### Step 3 — Restart HPR
+### Step 3 - Restart HPR
 
 HPR loads extensions at startup. Restart HPR and your extension is live. Check your terminal output for any confirmation messages printed by the extension.
 
@@ -59,7 +59,7 @@ Community extensions are submitted via pull request and reviewed before merging.
 
 | Extension | Author | Description |
 |-----------|--------|-------------|
-| *(none yet — be the first!)* | — | — |
+| *(none yet - be the first!)* | - | - |
 
 ---
 
@@ -71,7 +71,7 @@ Create a subfolder with your extension name, place your `.lua` file(s) inside it
 
 Every submitted extension is reviewed by plexescor before merging. The review checks for malicious behavior, correct cleanup of event subscriptions, safe SQL usage, and general code quality. Extensions that pass get merged. Extensions that fail get feedback and can be resubmitted.
 
-For everything you need to know about writing extensions — the full API reference, lifecycle hooks, database access, UI integration, EventHub, and working tutorial examples — see the **[HPR Extension Documentation](https://hpr-cpp.netlify.app/docs.html)**.
+For everything you need to know about writing extensions - the full API reference, lifecycle hooks, database access, UI integration, EventHub, and working tutorial examples - see the **[HPR Extension Documentation](https://hpr-cpp.netlify.app/docs.html)**.
 
 ---
 
