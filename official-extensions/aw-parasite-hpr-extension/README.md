@@ -17,28 +17,32 @@ This allows developers to enjoy complete web tracking statistics directly within
 To deploy the extension and render the browser tracking dashboard in your active HPR workspace, follow the step-by-step setup instructions below:
 
 ### 1. Install the Lua Extension Script
-The extension script (<code>main.lua</code>) must be placed inside your local HPR config extensions folder. This allows the HPR C++ background loader to scan, initialize, and execute the extension at startup.
+The extension script (`main.lua`) must be placed inside your local HPR config extensions folder. This allows the HPR C++ background loader to scan, initialize, and execute the extension at startup.
 
-* **On Windows**: Copy <code>main.lua</code> to:
-  <pre>%APPDATA%\HPR\HPR_Config\extensions\main.lua</pre>
-* **On Linux**: Copy <code>main.lua</code> to:
-  <pre>~/.config/HPR/extensions/main.lua</pre>
+* **On Windows**: Copy `main.lua` to:
+  ```cmd
+  %APPDATA%\HPR\HPR_Config\extensions\main.lua
+  ```
+* **On Linux**: Copy `main.lua` to:
+  ```bash
+  ~/.config/HPR/extensions/main.lua
+  ```
 
 ### 2. Extract and Install the Slint UI Layout Files
-The user interface views are packaged inside the <code>ui.zip</code> archive. These files declare the custom Slint component layout (<code>aw-parasite-view.slint</code>), struct schemas (<code>types.slint</code>), and sidebar navigation panels (<code>app-window.slint</code>) that draw the visual browser metrics dashboard.
+The user interface views are packaged inside the `ui.zip` archive. These files declare the custom Slint component layout (`aw-parasite-view.slint`), struct schemas (`types.slint`), and sidebar navigation panels (`app-window.slint`) that draw the visual browser metrics dashboard.
 
-1. Locate the <code>ui.zip</code> archive in the extension folder.
-2. Extract the contents of <code>ui.zip</code> into your HPR configuration user interface directory:
-   * **On Windows**: Extract files to <code>%APPDATA%\HPR\HPR_Config\ui\</code>
-   * **On Linux**: Extract files to <code>~/.config/HPR/ui/</code>
-3. Ensure that the files are placed directly inside the <code>ui</code> folder, maintaining the correct directory layout (for example, <code>ui/aw-parasite-view.slint</code> and <code>ui/types.slint</code>).
+1. Locate the `ui.zip` archive in the extension folder.
+2. Extract the contents of `ui.zip` into your HPR configuration user interface directory:
+   * **On Windows**: Extract files to `%APPDATA%\HPR\HPR_Config\ui\`
+   * **On Linux**: Extract files to `~/.config/HPR/ui/`
+3. Ensure that the files are placed directly inside the `ui` folder, maintaining the correct directory layout (for example, `ui/aw-parasite-view.slint` and `ui/types.slint`).
 
 ### 3. Enable the Slint UI Interpreter in HPR Configuration
 To load the dynamic interface (.slint) files at runtime without rebuilding the application, you must flip a boolean in HPR's main configuration file:
-1. Open the HPR config file (<code>config.csv</code>) in a text editor:
-   * **On Windows**: <code>%APPDATA%\HPR\HPR_Config\config.csv</code>
-   * **On Linux**: <code>~/.config/HPR/config.csv</code>
-2. Locate the setting <code>use-interpreter</code> and set its value to <code>true</code>:
+1. Open the HPR config file (`config.csv`) in a text editor:
+   * **On Windows**: `%APPDATA%\HPR\HPR_Config\config.csv`
+   * **On Linux**: `~/.config/HPR/config.csv`
+2. Locate the setting `use-interpreter` and set its value to `true`:
    ```csv
    use-interpreter,true
    ```
@@ -46,8 +50,8 @@ To load the dynamic interface (.slint) files at runtime without rebuilding the a
 ### 4. Verify Background Services
 The extension relies on external activity feeds. Confirm the following browser tracking services are active:
 1. Ensure the main ActivityWatch background application is running on your system.
-2. Verify that the <code>aw-watcher-web</code> plugin is installed and enabled inside your active web browser.
-3. Open your browser and navigate to <code>http://127.0.0.1:5600</code> to confirm that the server dashboard is accessible and successfully logging active tabs.
+2. Verify that the `aw-watcher-web` plugin is installed and enabled inside your active web browser.
+3. Open your browser and navigate to `http://127.0.0.1:5600` to confirm that the server dashboard is accessible and successfully logging active tabs.
 4. Launch or restart HPR. Click the new browser icon in the sidebar to open the Browser Activity view and monitor your web sessions.
 
 ---
