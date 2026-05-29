@@ -55,9 +55,7 @@ That is it. No package managers. No compilers. No installation scripts. One file
 
 ## Official Extensions
 
-* **AW URL Parasite HPR Extension**: Monitors and logs active web browser sessions in real-time by polling the local ActivityWatch API.
-* **AW AFK Parasite HPR Extension**: Intercepts aw-watcher-afk heartbeats and automatically pauses/resumes HPR tracking based on keyboard and mouse activity.
-
+* **AW Parasite HPR Extension**: The AW Parasite HPR Extension is a lightweight module that handles two jobs at once on a single HTTP server running on port 5600. URL Tracking and AFK Detection
 ---
 
 ## Community Extensions
