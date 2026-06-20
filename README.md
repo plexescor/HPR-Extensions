@@ -25,37 +25,28 @@ Browse the folders in this repository. Each extension has its own subfolder with
 ### Step 2 - Copy the `.lua` file(s) to your HPR extensions folder
 
 **Linux:**
-```
 ~/.config/HPR/extensions/
-```
-
 **Windows:**
-```
 %APPDATA%\HPR\HPR_Config\extensions\
-```
 
 You can organize extensions into subfolders. HPR scans recursively so a structure like this works perfectly:
 
-```
 extensions/
     spotify-tracker/
-        spotify.lua
+    spotify.lua
     sway-backend/
-        sway.lua
+    sway.lua
     my-other-thing.lua
-```
 
-### Step 3 - Restart HPR
-
-HPR loads extensions at startup. Restart HPR and your extension is live. Check your terminal output for any confirmation messages printed by the extension.
-
-That is it. No package managers. No compilers. No installation scripts. One file, one folder, done.
+### Step 3 - His RESCAN
+Hit RESCAN button in extension view
 
 ---
 
 ## Official Extensions
 
-* **AW Parasite HPR Extension**: The AW Parasite HPR Extension is a lightweight module that handles two jobs at once on a single HTTP server running on port 5600. URL Tracking and AFK Detection
+* **Budget Doom**: A self-contained raycasted FPS rendered entirely inside HPR's miscellaneous image panel. No requirements beyond enabling the panel in UI settings. See its [README](./official-extensions/budget-doom/README.md) for full details.
+
 ---
 
 ## Community Extensions
@@ -97,22 +88,6 @@ These rules apply to every extension in this repository.
 **No hardcoded personal paths.** Extensions must work on any user's machine.
 
 **Handle errors with pcall.** Wrap database operations and anything that can fail in `pcall` so a bad tick does not kill your extension thread.
-
----
-
-## Native Extensions (.so / .dll)
-
-HPR supports loading native shared library extensions (`.so` on Linux, `.dll` on Windows) but they are not officially entertained in this repository. Pull requests containing compiled native extensions will not be merged. Ever.
-
-Native extensions bypass HPR's entire Lua sandbox - no dangerous command filtering, no VM isolation, no controlled API surface. A native extension runs as raw C++ inside HPR's process with full access to everything. There is no safety net.
-
-If you find a native extension you want to use:
-
-- **Read the source code yourself before running anything.** A clean source repository means nothing if the author distributed a pre-compiled binary that does not match it. The only binary you should trust is one you compiled yourself.
-- **Compile it from source.** Clone the repository, inspect every line, build the `.so` or `.dll` yourself. Do not run pre-compiled native extension binaries from the internet regardless of how trustworthy the author seems.
-- **Enable native extensions in your config at your own risk.** Set `allow-dynamic-library-extensions,true` in your `config.csv` only after you have reviewed and compiled the extension yourself.
-
-The source code for any native extension worth using should be fully public and auditable. If the author is not sharing source code, do not use it.
 
 ---
 ## License
