@@ -1,8 +1,12 @@
 # Budget Doom
+<img width="1331" height="951" alt="Screenshot 2026-06-20 210815" src="https://github.com/user-attachments/assets/b4282f8a-6f1c-49e1-8f07-d5fa0819be80" />
 
 A fully self-contained, software-rendered raycasted FPS that runs entirely inside HPR's miscellaneous image panel. No external engine, no game framework, no GPU — every frame is built pixel-by-pixel in pure Lua and pushed to the UI as a raw RGBA buffer.
 
 Author: Plexescor
+
+<img width="1331" height="951" alt="Screenshot 2026-06-20 210753" src="https://github.com/user-attachments/assets/ff3ba111-bbab-4807-9af2-b72c4b56c841" />
+
 
 ---
 
