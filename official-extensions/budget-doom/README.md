@@ -19,7 +19,7 @@ The only thing you need to do is enable the panel it renders into:
 1. Open HPR.
 2. Go to **UI Settings**.
 3. Enable **"Show miscellaneous image panel"**.
-4. Restart HPR (or reload extensions, if your build supports hot-reload).
+4. Hit RESCAN in extensions panel
 
 That's it. If the panel isn't enabled, the extension still runs in the background — it just has nowhere to draw, so you won't see anything.
 
@@ -38,7 +38,7 @@ You can place it directly or inside a subfolder, e.g. `extensions/budget-doom/do
 
 2. Enable **"Show miscellaneous image panel"** in HPR's UI Settings (see above).
 
-3. Hit RESCAN
+3. Hit RESCAN in extensions panel
 
 4. Click into the miscellaneous image panel and start playing.
 
