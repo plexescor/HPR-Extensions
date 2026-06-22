@@ -27,14 +27,14 @@ That's it. If the panel isn't enabled, the extension still runs in the backgroun
 
 ## Installation
 
-1. Copy `budget-doom.lua` into your HPR extensions folder:
+1. Copy `doom.lua` into your HPR extensions folder:
 
    **Linux:**
     ~/.config/HPR/extensions/
    **Windows:**
     %APPDATA%\HPR\HPR_Config\extensions\
 
-You can place it directly or inside a subfolder, e.g. `extensions/budget-doom/budget-doom.lua` — HPR scans recursively.
+You can place it directly or inside a subfolder, e.g. `extensions/budget-doom/doom.lua` — HPR scans recursively.
 
 2. Enable **"Show miscellaneous image panel"** in HPR's UI Settings (see above).
 
